@@ -46,6 +46,6 @@ export const communitiesList = [
     position: 'Aztec Co-Founder',
     imageUrl: '/images/community/arnaud-schenk.png',
     description:
-      'The Rarimo communities has an incredible track record of leveraging programmable cryptography and their endless appetite for schlep to unlock the most interesting and valuable use cases at the intersection of legal, social, and technological systems...',
+      'The Rarimo community has an incredible track record of leveraging programmable cryptography and their endless appetite for schlep to unlock the most interesting and valuable use cases at the intersection of legal, social, and technological systems...',
   },
 ]
