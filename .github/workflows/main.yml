@@ -62,4 +62,4 @@ jobs:
           mkdir ~/.kube/
           echo "${{ secrets.KUBERCONFIG }}" | base64 -d > config
           mv config ~/.kube/
-          helm upgrade -i --kube-insecure-skip-tls-verify --kubeconfig ~/.kube/config "webclient" ".helm" --set global.IngressDomain=staging.rarimo.com --set "image.repository=ghcr.io/${GITHUB_REPOSITORY}" --set "image.tag=${GITHUB_SHA}" --create-namespace --namespace landing-stage
+          helm upgrade -i --kubeconfig ~/.kube/config "webclient" ".helm" --set global.IngressDomain=staging.rarimo.com --set "image.repository=ghcr.io/${GITHUB_REPOSITORY}" --set "image.tag=${GITHUB_SHA}" --create-namespace --namespace landing-stage
