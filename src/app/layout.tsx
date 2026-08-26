@@ -14,7 +14,13 @@ export async function generateMetadata() {
   const t = await getTranslations({ locale: locales[0], namespace: '' })
 
   return {
-    metadataBase: new URL('https://rarimo.com/'),
+    /* on Vercel previews the OG image resolves against the deployment URL;
+       on the real domain it falls back to rarimo.com */
+    metadataBase: new URL(
+      process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : 'https://rarimo.com/',
+    ),
     title: t('metadata.title'),
     description: t('metadata.description'),
 
